@@ -1,3 +1,5 @@
+/* Skrevet og levert av Morten Bråtesveen-Skråmestø. S326152. s326152@oslomet.no */
+
 import java.util.Arrays;
 
 public class Obligatorisk1 {
