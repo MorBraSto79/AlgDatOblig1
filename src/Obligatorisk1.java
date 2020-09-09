@@ -26,4 +26,25 @@ public class Obligatorisk1 {
 
     }
 
+    public static int ombyttinger(int[] a){
+
+        if(a.length < 1){
+            throw new java.util.NoSuchElementException("Tabellen er tom!");
+        }
+
+        int temp;
+        int bytting = 0;
+
+        for(int i = 0; i < a.length - 1; i++){
+            if(a[i] > a[i + 1]){
+                temp = a[i + 1];
+                a[i + 1] = a[i];
+                a[i] = temp;
+                bytting += 1;
+            }
+        }
+
+        return bytting;
+    }
+
 }
