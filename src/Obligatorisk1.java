@@ -47,4 +47,30 @@ public class Obligatorisk1 {
         return bytting;
     }
 
+    // Oppgave 2 //
+
+    public static int antallUlikeSortert(int[] a){
+
+        int antallUlike = 1;
+
+        if(a.length == 0){
+            antallUlike = 0;
+        }else if(a.length == 1){
+            return antallUlike;
+        }else if(a.length > 1){
+            for(int i = 0; i < a.length - 1; i++){
+                if(a[i] < a[i + 1]){
+                    antallUlike += 1;
+                }else if(a[i] == a[i + 1]){
+                    continue;
+                }else{
+                    throw new IllegalStateException("Tabellen er ikke sortert i stigende rekkefølge");
+                }
+            }
+        }
+
+        return antallUlike;
+
+    }
+
 }
