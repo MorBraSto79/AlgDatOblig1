@@ -134,6 +134,23 @@ public class Obligatorisk1 {
 
     }
 
+    // Oppgave 5 //
 
+    public static void rotasjon(char[] a){
+
+        int antRot = 1;
+        int temp = 0;
+
+        if(a.length < 2){
+            return;
+        }
+
+        for(int i = a.length - 1; i >= antRot; i--){
+            temp = a[i];
+            a[i] = a[i - antRot];
+            a[i - antRot] = (char) temp;
+        }
+
+    }
 
 }
