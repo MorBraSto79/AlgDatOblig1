@@ -2,7 +2,7 @@
 
 import java.util.Arrays;
 
-public class Obligatorisk1 {
+public class Oblig1{
 
     // Oppgave 1 //
 
