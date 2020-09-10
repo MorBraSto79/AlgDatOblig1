@@ -101,4 +101,39 @@ public class Obligatorisk1 {
 
     }
 
+    // Oppgave 4 //
+
+    public static void delsortering(int[] a){
+
+        int venstre = 0;
+        int hoyre = a.length - 1;
+        int teller = 0;
+        int temp = 0;
+
+        while(venstre < hoyre){
+            while((a[venstre]%2) != 0){
+                venstre += 1;
+                teller += 1;
+                if(venstre > hoyre){
+                    venstre = hoyre;
+                    break;
+                }
+            }
+            while(((a[hoyre]%2) == 0) && venstre < hoyre){
+                hoyre -= 1;
+            }
+            if(venstre < hoyre){
+                temp = a[venstre];
+                a[venstre] = a[hoyre];
+                a[hoyre] = temp;
+            }
+        }
+
+        Arrays.sort(a, 0, teller);
+        Arrays.sort(a, teller, a.length);
+
+    }
+
+
+
 }
