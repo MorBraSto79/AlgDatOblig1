@@ -153,4 +153,51 @@ public class Oblig1{
 
     }
 
+    // Oppgave 7 //
+    // Deloppgave a //
+
+    public static String flett(String s, String t){
+
+        String ut = "";
+
+        for(int i = 0; i < s.length() || i < t.length(); i++){
+            if(i < s.length()){
+                ut += s.charAt(i);
+            }
+            if(i < t.length()){
+                ut += t.charAt(i);
+            }
+        }
+
+        return ut;
+
+    }
+
+    // Deloppgave b //
+
+    public static String flett(String... s){
+
+        String ut = "";
+        String x;
+        int max = 0;
+
+        for(int i = 0; i < s.length; i++){
+            if(max < s[i].length()){
+                max = s[i].length();
+            }
+        }
+
+        for(int j = 0; j < max; j++){
+            for(int k = 0; k < s.length; k++){
+                x = s[k];
+                if(x.length() > j){
+                    ut += x.charAt(j);
+                }
+            }
+        }
+
+        return ut;
+
+    }
+
 }
