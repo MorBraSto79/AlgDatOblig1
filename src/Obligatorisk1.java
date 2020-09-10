@@ -73,4 +73,32 @@ public class Obligatorisk1 {
 
     }
 
+    // Oppgave 3 //
+
+    public static int antallUlikeUsortert(int[] a){
+
+        int unike = 1;
+
+        if(a.length == 0){
+            unike = 0;
+        }else if(a.length == 1){
+            return unike;
+        }else{
+            for(int i = 1; i < a.length; i++){
+                int j = 0;
+                for(j = 0; j < i; j++){
+                    if(a[i] == a[j]){
+                        break;
+                    }
+                }
+                if(i == j){
+                    unike += 1;
+                }
+            }
+        }
+
+        return unike;
+
+    }
+
 }
